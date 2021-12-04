@@ -1,26 +1,10 @@
-import express from 'express'
-import cors from 'cors'
+import express from 'express';
+import cors from 'cors';
 
-class Application {
-  app: express.Application
+const app = express()
 
-  constructor(){
-    this.app = express()
-    this.configureMiddleware()
-  }
+app.use(cors())
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 
-  private configureMiddleware(){
-    this.app.use(cors())
-    this.app.use(express.json())
-    this.app.use(express.urlencoded({extended: false}))
-  }
-
-  public serve(port: number|string){
-    this.app.listen(port, () => {
-      console.log(`app running at : http://localhost:${port}`)
-    })
-  }
-
-}
-
-export default new Application();
+export default app
