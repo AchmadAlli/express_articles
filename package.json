@@ -1,0 +1,12 @@
+{
+  "name": "express_articles",
+  "version": "1.0.0",
+  "description": "sample project using express js",
+  "main": "index.js",
+  "repository": "git@github.com:AchmadAlli/express_articles.git",
+  "author": "Achmad Ali Baidlowi <achmadali.baidlowi@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
